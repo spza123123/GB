@@ -69,7 +69,9 @@ public class View {
             FileWriter sameLastNameFileWriter = new FileWriter(sameLastNameFile, true);
             BufferedWriter sameLastNameWriter = new BufferedWriter(sameLastNameFileWriter);
             sameLastNameWriter.write(lastname);
-
+            for (int i = 0; i < data.size(); i++) {
+                sameLastNameWriter.write("<" + data.get(i) + "> ");
+            }
 
             sameLastNameWriter.write("\n");
             sameLastNameWriter.close();
